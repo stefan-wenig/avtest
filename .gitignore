@@ -1,0 +1,13 @@
+#basic visual studio directories
+_UpgradeReport_Files/
+[Dd]ebug*/
+[Rr]elease*/
+!ReleaseNotesGenerator*
+ipch/
+.vs/
+_ReSharper*/
+TestResults/
+*.DS_Store*
+
+obj/
+bin/
