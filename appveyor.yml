@@ -9,3 +9,22 @@ build_script:
 
 artifacts:
 - path: HelloWorld\bin
+  name: HelloWorld
+
+notifications:
+- provider: Webhook
+  url: https://app.signpath.io/API/v1/094f5736-6b8c-4ca7-9514-0933c8b928e2/Integrations/AppVeyor
+  on_build_success: true
+  on_build_failure: false
+  on_build_status_changed: false
+  method: POST
+  headers:
+    Authorization:
+      secure: d80f4y3xl5rE5J3+pW9Z4JCjL6tUem2INVSTnF+EQdQGv9EZoUx2ArF/FmkVRCXDIMYAFcrpllQm1CApZIcOqg==
+  body: >-
+    {
+        "AccountName": "stefan-wenig"
+        "ProjectSlug": {{projectName}},
+        "BuildVersion": {{buildVersion}}
+        "SigningPolicyId": "6e21385e-7939-460c-9cbd-3d06950f765f"
+    }
