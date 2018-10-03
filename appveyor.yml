@@ -8,5 +8,4 @@ build_script:
  - dotnet build /verbosity:quiet "avtest.sln"
 
 artifacts:
-- path: HelloWorld\bin\$(configuration)\netcoreapp2.0\HelloWorld.*
-  name: HelloWorld
+- path: HelloWorld\bin
