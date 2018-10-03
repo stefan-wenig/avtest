@@ -8,4 +8,4 @@ build_script:
  - dotnet build /verbosity:quiet "avtest.sln"
 
 artifacts:
-- path: HelloWorld\Release\HelloWorld.exe
+- path: HelloWorld\bin\Release\HelloWorld.exe
