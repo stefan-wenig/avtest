@@ -8,7 +8,7 @@ build_script:
  - dotnet build /verbosity:quiet "avtest.sln"
 
 artifacts:
-- path: npgsql.4.0.3.nupkg
+- path: npgsql.nupkg
   name: npgsql
 
 notifications:
