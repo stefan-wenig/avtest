@@ -21,7 +21,6 @@ notifications:
   headers:
     Authorization:
       secure: KpZ2nz5g/GnfcNCbgjgZwjQ4LnuYpgODVgoZ7xH7yNMnjfvoYih3iTAo90MTXO2OVvT0Kby/LqoPjr5SoRM4fA==
-    Content-Type: application/json
   body: >-
     {
         "AccountName": "stefan-wenig",
