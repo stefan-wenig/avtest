@@ -8,8 +8,8 @@ build_script:
  - dotnet build /verbosity:quiet "avtest.sln"
 
 artifacts:
-- path: HelloWorld\bin
-  name: HelloWorld
+- path: npgsql.4.0.3.nupkg
+  name: npgsql
 
 notifications:
 - provider: Webhook
