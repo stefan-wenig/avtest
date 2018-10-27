@@ -20,7 +20,7 @@ notifications:
   method: POST
   headers:
     Authorization:
-      secure: Wi3uxGbWh/vK7CrpXbPX2WAU5U4eirNBWICQ54sEZ8Igqg1W9oyuNLltG0nYxXKu7U6BlG+4Yi/JSQ+lvFQLgA==
+      secure: LBdE6tzbb/OfO9J0ngx8MgCmqrnnJ6K/CjgidDtQdwe0nxDJi9zTuBoJ5Y0pNoLTq+cf5w1DDVuwG3sRTz92EA==
   body: >-
     {
         "AccountName": "stefan-wenig",
