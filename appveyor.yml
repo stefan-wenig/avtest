@@ -13,18 +13,18 @@ artifacts:
 
 notifications:
 - provider: Webhook
-  url: https://fqa.test.signpath.io/API/v1/094f5736-6b8c-4ca7-9514-0933c8b928e2/Integrations/AppVeyor
+  url: https://fqa.test.signpath.io/API/v1/50c064a2-8258-4d03-b9a8-43498f58c6a1/Integrations/AppVeyor
   on_build_success: true
   on_build_failure: false
   on_build_status_changed: false
   method: POST
   headers:
     Authorization:
-      secure: KpZ2nz5g/GnfcNCbgjgZwjQ4LnuYpgODVgoZ7xH7yNMnjfvoYih3iTAo90MTXO2OVvT0Kby/LqoPjr5SoRM4fA==
+      secure: Wi3uxGbWh/vK7CrpXbPX2WAU5U4eirNBWICQ54sEZ8Igqg1W9oyuNLltG0nYxXKu7U6BlG+4Yi/JSQ+lvFQLgA==
   body: >-
     {
         "AccountName": "stefan-wenig",
         "ProjectSlug": "{{projectName}}",
         "BuildVersion": "{{buildVersion}}",
-        "SigningPolicyId": "6e21385e-7939-460c-9cbd-3d06950f765f"
+        "SigningPolicyId": "d6ff3900-6fa8-4751-a153-c76963934547"
     }
