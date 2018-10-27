@@ -13,7 +13,7 @@ artifacts:
 
 notifications:
 - provider: Webhook
-  url: https://fqa.test.signpath.io/API/v1/50c064a2-8258-4d03-b9a8-43498f58c6a1/Integrations/AppVeyor
+  url: https://app.signpath.io/API/v1/50c064a2-8258-4d03-b9a8-43498f58c6a1/Integrations/AppVeyor
   on_build_success: true
   on_build_failure: false
   on_build_status_changed: false
