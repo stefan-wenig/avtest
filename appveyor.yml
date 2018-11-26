@@ -2,10 +2,14 @@ version: 1.0.{build}
 image: Visual Studio 2017
 
 before_build:
- - dotnet restore
+- dotnet restore
 
 build_script:
- - dotnet build /verbosity:quiet "avtest.sln"
+- ps: |
+  Write-Output "Branch: $env:APPVEYOR_REPO_BRANCH"
+ 
+     
+# - dotnet build /verbosity:quiet "avtest.sln"
 
 artifacts:
 - path: npgsql.nupkg
