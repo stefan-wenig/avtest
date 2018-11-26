@@ -6,7 +6,7 @@ before_build:
 
 build_script:
 - ps: |
-  Write-Output "Branch: $env:APPVEYOR_REPO_BRANCH"
+    Write-Output "Branch: $env:APPVEYOR_REPO_BRANCH"
  
      
 # - dotnet build /verbosity:quiet "avtest.sln"
