@@ -15,20 +15,12 @@ artifacts:
 - path: npgsql.nupkg
   name: npgsql
 
-notifications:
+deploy:
 - provider: Webhook
-  url: https://app.signpath.io/API/v1/50c064a2-8258-4d03-b9a8-43498f58c6a1/Integrations/AppVeyor
+  url: https://app.signpath.io/API/v1/50c064a2-8258-4d03-b9a8-43498f58c6a1/Integrations/AppVeyor?SigningPolicyId=d6ff3900-6fa8-4751-a153-c76963934547
   on_build_success: true
   on_build_failure: false
   on_build_status_changed: false
   method: POST
-  headers:
-    Authorization:
-      secure: LBdE6tzbb/OfO9J0ngx8MgCmqrnnJ6K/CjgidDtQdwe0nxDJi9zTuBoJ5Y0pNoLTq+cf5w1DDVuwG3sRTz92EA==
-  body: >-
-    {
-        "AccountName": "stefan-wenig",
-        "ProjectSlug": "{{projectName}}",
-        "BuildVersion": "{{buildVersion}}",
-        "SigningPolicyId": "d6ff3900-6fa8-4751-a153-c76963934547"
-    }
+  authorization:
+     secure: LBdE6tzbb/OfO9J0ngx8MgCmqrnnJ6K/CjgidDtQdwe0nxDJi9zTuBoJ5Y0pNoLTq+cf5w1DDVuwG3sRTz92EA==  
