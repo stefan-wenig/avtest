@@ -7,7 +7,7 @@ before_build:
 build_script:
 - ps: |
     Write-Output "Branch: $env:APPVEYOR_REPO_BRANCH"
-    $env:sign=true
+    $env:sign="true"
     Write-Output $env:sign 
      
 # - dotnet build /verbosity:quiet "avtest.sln"
