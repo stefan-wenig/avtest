@@ -7,6 +7,7 @@ before_build:
 build_script:
 - ps: |
     Write-Output "Branch: $env:APPVEYOR_REPO_BRANCH"
+    $env:sign=true
  
      
 # - dotnet build /verbosity:quiet "avtest.sln"
@@ -20,3 +21,5 @@ deploy:
   url: https://app.signpath.io/API/v1/50c064a2-8258-4d03-b9a8-43498f58c6a1/Integrations/AppVeyor?SigningPolicyId=d6ff3900-6fa8-4751-a153-c76963934547
   authorization:
      secure: HzkhTlDxJIlpuXZH63N2v8MdAr+xq1FH5ra2AKGjpe256AfKgpfKU0gACDSoER0vimPFkiYRA6928QoG9T6Ylw==
+  on:
+    sign: true
