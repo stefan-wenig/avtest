@@ -18,7 +18,7 @@ artifacts:
 
 deploy:
 - provider: Webhook
-  url: https://app.signpath.io/API/v1/50c064a2-8258-4d03-b9a8-43498f58c6a1/Integrations/AppVeyor?ProjectKey=webhook_test&SigningPolicyKey=test-signing
+  url: https://fqa.test.signpath.io/API/v1/50c064a2-8258-4d03-b9a8-43498f58c6a1/Integrations/AppVeyor?ProjectKey=webhook_test&SigningPolicyKey=test-signing
   authorization:
      secure: z44xspZz4lyUbjJ8OqajQX8Mj/yRtEfDoloqFT0dr0DZZ5F5ml0khIjsW5xpmGFBrJFatq1heLDGscw31ekedQ==
 
