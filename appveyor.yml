@@ -20,6 +20,5 @@ deploy:
 - provider: Webhook
   url: https://app.signpath.io/API/v1/50c064a2-8258-4d03-b9a8-43498f58c6a1/Integrations/AppVeyor?SigningPolicyId=d6ff3900-6fa8-4751-a153-c76963934547
   authorization:
-     secure: HzkhTlDxJIlpuXZH63N2v8MdAr+xq1FH5ra2AKGjpe256AfKgpfKU0gACDSoER0vimPFkiYRA6928QoG9T6Ylw==
-  on:
-    sign: true
+     secure: z44xspZz4lyUbjJ8OqajQX8Mj/yRtEfDoloqFT0dr0DZZ5F5ml0khIjsW5xpmGFBrJFatq1heLDGscw31ekedQ==
+
