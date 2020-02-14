@@ -4,8 +4,11 @@ image: Visual Studio 2017
 before_build:
 # - dotnet restore
 
+branches:
+  only:
+    - never-build-branch-automatically-dont-use-this-name
+    
 build_script:
 - ps: |
     Write-Output "Branch: $env:APPVEYOR_REPO_BRANCH"
-    $env:sign="true"
-    Write-Output $env:sign 
+    Write-Output $env:SIGNING_REQUEST_ID
