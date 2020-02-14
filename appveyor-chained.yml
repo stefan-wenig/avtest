@@ -1,0 +1,11 @@
+version: 1.0.{build}
+image: Visual Studio 2017
+
+before_build:
+# - dotnet restore
+
+build_script:
+- ps: |
+    Write-Output "Branch: $env:APPVEYOR_REPO_BRANCH"
+    $env:sign="true"
+    Write-Output $env:sign 
