@@ -12,4 +12,3 @@ build_script:
 - ps: |
     Write-Output "Branch: $env:APPVEYOR_REPO_BRANCH"
     Write-Output $env:SIGNING_REQUEST_ID
-
