@@ -15,6 +15,7 @@ build_script:
 artifacts:
 - path: npgsql.nupkg
   name: npgsql
+- path: HelloWorld/*
 
 deploy:
 - provider: Webhook
