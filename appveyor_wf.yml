@@ -1,0 +1,60 @@
+version: 1.0.{build}
+image: Visual Studio 2017
+
+environment:
+    
+    sp_token:
+        secure: HzkhTlDxJIlpuXZH63N2v8MdAr+xq1FH5ra2AKGjpe256AfKgpfKU0gACDSoER0vimPFkiYRA6928QoG9T6Ylw== 
+    sp_org: 50c064a2-8258-4d03-b9a8-43498f58c6a1
+    
+    matrix:
+    
+    - job_name: Build
+    
+    - job_name: Deploy
+      job_depends_on: Build
+      
+for:
+
+    -
+        matrix:
+            only:
+                - job_name: Build
+
+        build_script:
+        - ps: |
+            Write-Output "Branch: $env:APPVEYOR_REPO_BRANCH"
+            $env:sign="true"
+            Write-Output $env:sign 
+
+        artifacts:
+        - path: npgsql.nupkg
+          name: npgsql
+        - path: HelloWorld/*
+
+        deploy:
+        - provider: Webhook
+          url: https://app.signpath.io/API/v1/50c064a2-8258-4d03-b9a8-43498f58c6a1/Integrations/AppVeyor?ProjectKey=avtest&SigningPolicyKey=test-signing
+          authorization:
+             secure: HzkhTlDxJIlpuXZH63N2v8MdAr+xq1FH5ra2AKGjpe256AfKgpfKU0gACDSoER0vimPFkiYRA6928QoG9T6Ylw==
+
+    -
+        matrix:
+            only:
+                - job_name: Deploy
+                
+        build_script:
+        - ps: |
+            Install-Module SignPath
+            Get-SignedArtifact -CIUserToken $Env:sp_token -OrganizationId $Env:sp_org -SigningRequestId $Env:sr_id -OutputArtifactPath npgsql.nupkg
+            
+        deploy: 
+            release: avtest_v$(appveyor_build_version)
+            description: 'AppVeyor test v$(appveyor_build_version)'
+            provider: GitHub
+            auth_token:
+                secure: <your encrypted token> # your encrypted token from GitHub
+            artifact: /.*\.nupkg/            # upload all NuGet packages to release assets        
+
+        artifacts:
+        - path: npgsql.nupkg         
