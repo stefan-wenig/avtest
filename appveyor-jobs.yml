@@ -1,0 +1,31 @@
+version: 1.0.{build}
+image: Visual Studio 2017
+
+environment:
+    
+  matrix:
+    
+    - job_name: Build
+    
+    - job_name: Deploy
+      job_depends_on: Build
+      
+platform:
+  - x86
+  - Any CPU
+
+configuration:
+  - Debug
+  - Release
+
+build_script:
+  - ps: |
+        Write-Output "Branch: $env:APPVEYOR_REPO_BRANCH"
+        $env:sign="true"
+        Write-Output $env:sign 
+
+artifacts:
+  - path: npgsql.nupkg
+    name: npgsql
+  - path: HelloWorld/*
+
