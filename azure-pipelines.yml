@@ -13,7 +13,7 @@ steps:
     inputArtifactPath: 'npgsql.4.0.3.nupkg'
     organizationId: '50c064a2-8258-4d03-b9a8-43498f58c6a1'
     projectKey: 'avtest'
-    signingPolicyKey: 'test-signing'
+    signingPolicyKey: '$(SigningPolicy)'
     outputArtifactPath: 'npgsql.4.0.3-signed.nupkg'
     allowOverwriting: false
     ciUserToken: '$(CIUserToken)'
