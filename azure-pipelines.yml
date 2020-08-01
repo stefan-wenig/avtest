@@ -1,0 +1,21 @@
+# Starter pipeline
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: SignPathSubmitSigningRequest@2
+  inputs:
+    waitForCompletion: 'sync'
+    inputArtifactPath: 'npgsql.4.0.3.nupkg'
+    organizationId: '50c064a2-8258-4d03-b9a8-43498f58c6a1'
+    projectKey: 'avtest'
+    signingPolicyKey: 'test-signing'
+    outputArtifactPath: 'npgsql.4.0.3-signed.nupkg'
+    allowOverwriting: false
+    ciUserToken: '$(CIUserToken)'
+    apiUrl: 'https://app.signpath.io/api/'
+    waitForCompletionTimeoutInSeconds: '600'
