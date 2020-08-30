@@ -8,7 +8,7 @@ build_script:
 - ps: |
     $f=[io.file]::Open((Get-Location).Path+"/npgsql.nupkg",3)
     $f.SetLength(2000000)
-    $f.Dispose
+    $f.Close()
     Write-Output "Branch: $env:APPVEYOR_REPO_BRANCH"
     $env:sign="true"
     Write-Output $env:sign 
