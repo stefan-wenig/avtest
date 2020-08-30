@@ -23,7 +23,7 @@ artifacts:
 
 deploy:
 - provider: Webhook
-  url: https://app.signpath.io/API/v1/50c064a2-8258-4d03-b9a8-43498f58c6a1/Integrations/AppVeyor?ProjectKey=avtest&SigningPolicySlug=test-signing&ArtifactConfigurationSlug=install
+  url: https://app.signpath.io/API/v1/50c064a2-8258-4d03-b9a8-43498f58c6a1/Integrations/AppVeyor?ProjectSlug=avtest&SigningPolicySlug=test-signing&ArtifactConfigurationSlug=install
 
   authorization:
      secure: HzkhTlDxJIlpuXZH63N2v8MdAr+xq1FH5ra2AKGjpe256AfKgpfKU0gACDSoER0vimPFkiYRA6928QoG9T6Ylw==
