@@ -7,7 +7,7 @@ before_build:
 build_script:
 - ps: |
     $f=[io.file]::Open((Get-Location).Path+"/install.msi",3)
-    $f.SetLength(3000000000)
+    $f.SetLength(500000000)
     $f.Close()
     Write-Output "Branch: $env:APPVEYOR_REPO_BRANCH"
     $env:sign="true"
