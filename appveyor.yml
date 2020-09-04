@@ -23,7 +23,7 @@ deploy:
   url: https://app.signpath.io/API/v1/b5c891d7-d62e-4abb-9b2d-0134612e1b1a/Integrations/AppVeyor?ProjectSlug=avtest&SigningPolicySlug=test-signing&ArtifactConfigurationSlug=install
 
   authorization:
-     secure: I+2RxuXJvOOO6Q7xmXIk98oQuoYWqQ+V+JUd4SWjFrdIxI7cv5QGP1E+sZqNcG2N
+     secure: KSCYAPs7xjfRxSliWq4jPn8Iz5Hn96kc7UyBdgtCfFdZqzRyrGsd+jzMzzDXXq6opSx7x0P0cv9M9hzWuQdw0g==
   on:
     sign: true
 
