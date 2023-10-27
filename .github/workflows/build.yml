@@ -25,10 +25,15 @@ jobs:
       with:
         fetch-depth: 0
 
+    - name: Build
+      run: |
+        mkdir ${{ matrix.target }}
+        cp ${{ matrix.target }}/install.msi 
+
     - name: Publish-for-signing
       uses: actions/upload-artifact@v3
       with: 
-        name: unsigned-${{matrix.configuration}}
-        path: install.msi
-
-
+        name: unsigned-artifacts
+        path: ${{ matrix.target }}/install.msi
+  
+  
