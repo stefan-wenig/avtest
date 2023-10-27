@@ -25,4 +25,5 @@ jobs:
     - name: Publishe-signed
       uses: actions/upload-artifact@v3
       with:
-        path: unsigned-artifacts-${{sample-param}}
+        name: artifacts-${{sample-param}}
+        path: unsigned-artifacts
