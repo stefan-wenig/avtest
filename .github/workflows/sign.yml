@@ -4,8 +4,6 @@ on:
   workflow_call:
     inputs: 
       sample-param: { type: string }
-    secrets: 
-      token: { required: true }
 
 jobs: 
   sign:
