@@ -28,12 +28,12 @@ jobs:
     - name: Build
       run: |
         mkdir ${{ matrix.configuration }}
-        cp install.msi ${{ matrix.configuration }}/ 
+        cp install.msi install-${{ matrix.configuration }}.msi
 
     - name: Publish-for-signing
       uses: actions/upload-artifact@v3
       with: 
         name: unsigned-artifacts
-        path: ${{ matrix.configuration }}/install.msi
+        path: install-${{ matrix.configuration }}.msi
   
   
