@@ -21,6 +21,7 @@ jobs:
       uses: actions/download-artifact@v3
       with: 
         name: unsigned-artifacts
+        path: unsigned-artifacts
 
     - name: Publishe-signed
       uses: actions/upload-artifact@v3
