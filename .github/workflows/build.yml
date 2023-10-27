@@ -15,7 +15,8 @@ jobs:
         configuration: [Debug, Release]
 
     runs-on: windows-latest
-    
+    environment: avtest-gha
+
     env:
       sample-var: value
       
