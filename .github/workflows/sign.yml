@@ -1,0 +1,23 @@
+name: sign
+
+on: 
+  workflow_call:
+    inputs: 
+      sample-param: { type: string }
+
+jobs: 
+  sign:
+
+    runs-on: windows-latest
+    
+    steps:
+    
+    - name: Get-for-signing
+      uses: actions/dowload-artifact@v3
+      with: 
+        name: unsigned-artifacts
+
+    - name: Publishe-signed
+      uses: actions/upload-artifact@v3
+      with:
+        path: unsigned-artifacts-${{sample-param}}
