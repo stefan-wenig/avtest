@@ -25,7 +25,7 @@ jobs:
 #        name: unsigned-artifacts
 #        path: unsigned-artifacts
 
-    - name Get-via-Api
+    - name: Get-via-Api
       run: |
         curl -L \
           -H "Accept: application/vnd.github+json" \
