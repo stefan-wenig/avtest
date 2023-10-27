@@ -35,5 +35,11 @@ jobs:
       with: 
         name: unsigned-artifacts
         path: install-${{ matrix.configuration }}.msi
+    
+    - name: Perform-signing
+      uses: ./.github/workflows/sign.yml
+      with:
+        sample-param: blub
   
-  
+
+     eeeeeeeeeee
