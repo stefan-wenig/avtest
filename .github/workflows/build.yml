@@ -28,7 +28,7 @@ jobs:
     - name: Build
       run: |
         mkdir ${{ matrix.configuration }}
-        cp ${{ matrix.configuration }}/install.msi 
+        cp install.msi ${{ matrix.configuration }}/ 
 
     - name: Publish-for-signing
       uses: actions/upload-artifact@v3
