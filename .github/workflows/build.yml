@@ -28,7 +28,7 @@ jobs:
     - name: Publish-for-signing
       uses: actions/upload-artifact@v3
       with: 
-        name: unsigned
+        name: unsigned-${{matrix.configuration}}
         path: install.msi
 
 
