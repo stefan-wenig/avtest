@@ -38,6 +38,7 @@ jobs:
         path: install-${{ matrix.configuration }}.msi
 
   perform-signing:
+    needs: build
     uses: ./.github/workflows/sign.yml
     with:
       sample-param: blub
