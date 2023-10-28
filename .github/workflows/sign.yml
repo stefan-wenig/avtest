@@ -18,6 +18,9 @@ jobs:
       with:
         fetch-depth: 0
 
+    - name: wait
+      run: sleep 10000
+       
 #    - name: Get-for-signing
 #      uses: actions/download-artifact@v3
 #      with: 
