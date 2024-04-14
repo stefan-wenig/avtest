@@ -1,0 +1,9 @@
+name: echo
+on: 
+  label: manual
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - run: echo ${{ECHOTEXT}}
+      
