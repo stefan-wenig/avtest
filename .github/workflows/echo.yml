@@ -1,8 +1,16 @@
 name: echo
 on: workflow_dispatch
+env: 
+  wf-level: "value"
 jobs:
   build:
-    runs-on: windows-latest
+    env:
+      job-level: "value"
+    runs-on: linux-latest
     steps:
-      - run: echo "${{vars.ECHOTEXT}}"
+      - run: |
+          echo "${{vars.ECHOTEXT}}"
+          echo ${{ toJson(env) }}
+        env: 
+          step-level: "value"
       
