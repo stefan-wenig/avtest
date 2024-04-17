@@ -1,16 +1,16 @@
 name: echo
 on: workflow_dispatch
 env: 
-  wf-level: "value"
+  wflevel: "value"
 jobs:
   build:
     env:
-      job-level: "value"
+      joblevel: "value"
     runs-on: ubuntu-latest
     steps:
       - run: |
           echo "${{vars.ECHOTEXT}}"
           echo ${{ toJson(env) }}
         env: 
-          step-level: "value"
+          steplevel: "value"
       
