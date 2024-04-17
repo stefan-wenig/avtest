@@ -1,7 +1,7 @@
 name: echo
 on: push
 env: 
-  wflevel: "value"
+  -- wflevel: "value"
 jobs:
   build:
     env:
