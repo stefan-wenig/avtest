@@ -8,9 +8,10 @@ jobs:
       joblevel: "value"
     runs-on: ubuntu-latest
     steps:
-      - run: |
+      - id: me
+        run: |
           echo "${{vars.ECHOTEXT}}"
-          echo '${{ toJson(env) }}'
+          echo '${{ toJson(steps.me.env) }}'
         env: 
           steplevel: "value"
       
