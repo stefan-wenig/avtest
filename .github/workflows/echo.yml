@@ -4,8 +4,6 @@ env:
   wflevel: "value"
 jobs:
   build:
-    outputs: 
-      arg1: "val"
     env:
       joblevel: "value"
     runs-on: ubuntu-latest
@@ -13,7 +11,8 @@ jobs:
       - id: me
         run: |
           echo "${{vars.ECHOTEXT}}"
-          echo '${{ toJson(jobs.build.outputs) }}'
+          echo '${{ toJson(jobs.build.env) }}'
+          echo '${{ toJson(env) }}'
         env: 
           steplevel: "value"
       
