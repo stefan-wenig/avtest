@@ -1,5 +1,5 @@
 name: echo
-on: workflow_dispatch
+on: push
 env: 
   wflevel: "value"
 jobs:
