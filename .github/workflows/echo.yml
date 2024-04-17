@@ -10,9 +10,9 @@ jobs:
     steps:
       - id: me
         run: |
-          echo "${{vars.ECHOTEXT}}"
-          echo '${{ toJson(job.env) }}'
-          echo '${{ toJson(env) }}'
+          echo ECHOTEXT "${{vars.ECHOTEXT}}"
+          echo job.env '${{ toJson(job.container.env) }}'
+          echo env '${{ toJson(env) }}'
         env: 
           steplevel: "value"
       
