@@ -11,7 +11,7 @@ jobs:
       - id: me
         run: |
           echo ECHOTEXT "${{vars.ECHOTEXT}}"
-          echo job.env '${{ toJson(job.container.env) }}'
+          echo vars.ECHOTEXT '${{ toJson(vars.ECHOTEXT) }}'
           echo env '${{ toJson(env) }}'
         env: 
           steplevel: "value"
