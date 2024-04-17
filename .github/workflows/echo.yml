@@ -1,7 +1,7 @@
 name: echo
 on: push
 env: 
-  -- wflevel: "value"
+  wflevel: "value"
 jobs:
   build:
     env:
@@ -10,7 +10,7 @@ jobs:
     steps:
       - run: |
           echo "${{vars.ECHOTEXT}}"
-          echo ${{ toJson(env) }}
+          echo '${{ toJson(env) }}'
         env: 
           steplevel: "value"
       
